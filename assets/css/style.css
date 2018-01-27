@@ -13,6 +13,8 @@ html {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  z-index: 5;
+  background-color: white;
 }
 
 .logo {
@@ -60,19 +62,194 @@ html {
   padding: 2rem 1.5rem;
 }
 
+.right {
+  width: 40%;
+}
+
+.img-container {
+  overflow: hidden;
+}
+
+.img-container img, .img-container video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+} /* applies for all images */
+
+.left .img-container {
+  width: 100%;
+} /* applies for all images on left side*/
+
 /* title */
 
 .title {
   background-color: #d5dbdb;
+  display: flex;
 }
 
-.title .left .img-container {
+.title .right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: hsl(184, 5%, 20%);
+}
+
+h4 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: hsl(184, 5%, 20%);
+}
+
+.title .right h1, .title .right h4 {
+  padding-bottom: 1.5rem;
+}
+
+.title .right h5 {
+  width: 40%;
+  padding: 0.8rem 0;
+  background-color: hsl(184, 5%, 20%);
+  color: white;
+  text-align: center;
+  border-radius: 3px;
+  transition: background-color .15s;
+}
+
+.title .right h5:hover{
+  background-color: hsl(184, 5%, 47%);
+}
+
+/* info */
+.info {
+  display: flex;
+}
+/* left part of info */
+
+h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: hsl(184, 5%, 20%);
+  padding: 2rem 0;
+} /* applies to all h2 */
+
+.info .left p {
+  margin-bottom: 2rem;
+}
+
+.info .left p.caption {
+  font-family: "Arial";
+  font-size: 0.8rem;
+}
+
+/* right part of info */
+
+.info .right, .exhibit .right {
+  display: flex;
+  flex-direction: column;
+}
+
+.right .item {
   width: 100%;
-  overflow: hidden;
+  display: flex;
+  align-items: center;
+  border: 1px solid #d5dbdb;
+  transition: background-color 0.2s;
 }
 
-.img-container img {
-  max-width: 100%;
-  height: auto;
-  display: block;
+.right .item:hover {
+  background-color: #d5dbdb;
+}
+
+.right .item .img-container {
+  max-width: 35%;
+}
+
+.right .item .img-container img {
+  margin: 1rem;
+}
+
+.right .item .content {
+  margin: 0 1rem;
+  width: 65%;
+}
+
+.right .item p {
+  margin: 0.5rem 0;
+}
+
+.right .items a {
+  color: blue;
+}
+
+.catalog {
+  width: 100%;
+  background-color: #d5dbdb;
+}
+
+.catalog h2, .exhibit h2 {
+  width: 100%;
+  text-align: center;
+  padding: 2.5rem 0;
+}
+
+.courses {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 2rem;
+}
+
+.row {
+  margin: 0 4rem 2rem 4rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.row .item {
+  display: inline-block;
+  width: 33%;
+  background-color: white;
+  margin: 0 1rem;
+}
+
+.row .item .image-container{
+  width: 100%;
+}
+
+.row .item .content {
+  padding: 1.5rem;
+}
+
+.row .item h4 {
+  padding-bottom: 1rem;
+}
+.row .item p {
+  padding-bottom: 0.5rem;
+}
+
+/* exhibit */
+
+.exhibit {
+  width: 100%;
+}
+
+.exhibit-body {
+  display: flex;
+}
+
+.exhibit .left {
+  padding-top: 0;
+}
+
+.exhibit .content {
+  padding: 1.5rem;
+}
+
+.exhibit .content p {
+  padding: .5rem 0;
 }
