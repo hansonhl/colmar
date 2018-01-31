@@ -56,7 +56,7 @@ html {
   }
 }
 
-@media screen and (max-width: 679px){
+@media screen and (max-width: 680px){
   .header .full {
     display: none;
   }
@@ -103,12 +103,14 @@ h1 {
   font-size: 2.5rem;
   font-weight: 900;
   color: hsl(184, 5%, 20%);
+  padding-right: 1rem;
 }
 
 h4 {
   font-size: 1.25rem;
   font-weight: 700;
   color: hsl(184, 5%, 20%);
+  padding-right: 1rem;
 }
 
 /* title */
@@ -141,6 +143,37 @@ h4 {
 
 .title .right h5:hover{
   background-color: hsl(184, 5%, 47%);
+}
+
+@media screen and (max-width: 800px){
+  .title {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .title .left {
+    width: 100%;
+    padding: 0;
+  }
+
+  .title .right {
+    width: 100%;
+  }
+
+  .title .right h1 {
+    padding: 0;
+    margin: 1.5rem;
+  }
+  .title .right h4 {
+    padding: 0;
+    margin: 1rem 1.5rem;
+  }
+
+  .title .right h5 {
+    width: 85%;
+    margin: 1rem 1.5rem;
+    margin-bottom: 2rem;
+  }
 }
 
 /* info */
@@ -185,7 +218,7 @@ h2 {
 }
 
 .right .item .img-container {
-  max-width: 35%;
+  width: 35%;
 }
 
 .right .item .img-container img {
@@ -204,6 +237,50 @@ h2 {
 .right .item a {
   color: blue;
 }
+
+@media screen and (max-width: 680px){
+  .info .left {
+    padding: 0;
+    display: none;
+  }
+
+  .info .right {
+    padding: 0;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px){
+  .right .item {
+    flex-direction: column;
+    align-items: flex-start;
+    overflow: hidden;
+  }
+
+  .right .item .img-container {
+    width: auto;
+  }
+
+  .right .item .full {
+    display: none;
+  }
+
+  .right .item .img-container img{
+    margin: 0;
+  }
+
+  .right .item .content {
+    margin: 1.5rem;
+    width: auto;
+  }
+}
+
+@media screen and (min-width: 480px){
+  .info .right .item .lite {
+    display: none;
+  }
+}
+/* catalog */
 
 .catalog {
   width: 100%;
@@ -251,6 +328,47 @@ h2 {
   padding-bottom: 0.5rem;
 }
 
+@media screen and (min-width: 680px) and (max-width: 780px){
+  .row .item{
+    min-width: 25%;
+  }
+
+  .row .item .img-container img{
+    min-height: 100px;
+  }
+}
+
+@media screen and (max-width: 680px){
+  .catalog {
+    background-color: white;
+  }
+
+  .courses.full {
+    display: none
+  }
+
+  .courses.lite {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid #d5dbdb;
+  }
+
+  .courses.lite h4{
+    background-color: #d5dbdb;
+    padding: 1rem;
+    width: 80%;
+    margin-bottom: 0.5rem;
+    border-radius: 3px;
+  }
+}
+
+@media screen and (min-width: 680px){
+  .courses.lite {
+    display: none;
+  }
+}
+
 /* exhibit */
 
 .exhibit {
@@ -274,6 +392,21 @@ h2 {
   font-family: "Arial", sans-serif;
 }
 
+@media screen and (max-width: 680px){
+  .exhibit .right {
+    display: none;
+  }
+
+  .exhibit .left {
+    width: 100%;
+    padding: 0;
+  }
+
+  .exhibit .content {
+    width: auto;
+    padding: 1.5rem;
+  }
+}
 /* footer */
 
 .footer {
