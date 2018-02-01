@@ -144,8 +144,17 @@ h4 {
 .title .right h5:hover{
   background-color: hsl(184, 5%, 47%);
 }
+@media screen and (max-width: 900px) and (min-width: 680px){
+  .title h1 {
+    font-size: 2rem;
+  }
 
-@media screen and (max-width: 800px){
+  .title .right h5 {
+    padding: 0.6rem;
+  }
+}
+
+@media screen and (max-width: 680px){
   .title {
     display: flex;
     flex-direction: column;
@@ -236,6 +245,16 @@ h2 {
 
 .right .item a {
   color: blue;
+}
+
+@media screen and (max-width: 900px) and (min-width: 680px){
+  .right p {
+    font-size: 0.8rem;
+  }
+
+  .right h4 {
+    font-size: 1.1rem;
+  }
 }
 
 @media screen and (max-width: 680px){
@@ -336,6 +355,14 @@ h2 {
   .row .item .img-container img{
     min-height: 100px;
   }
+
+  .row .item p {
+    font-size: 0.8rem;
+  }
+
+  .row .item h4 {
+    font-size: 1.1rem;
+  }
 }
 
 @media screen and (max-width: 680px){
@@ -387,7 +414,7 @@ h2 {
   padding-top: 1.5rem;
 }
 
-.exhibit .content p, .footer p {
+.exhibit .right .content p, .footer p {
   padding: .5rem 0;
   font-family: "Arial", sans-serif;
 }
